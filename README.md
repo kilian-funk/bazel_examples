@@ -1,2 +1,4 @@
 # bazel_examples
-How to do stuff with bazel
+
+This repo demonstrates features and patterns
+for working with Bazel in a mono-repo setup.
