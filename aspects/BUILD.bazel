@@ -1,0 +1,38 @@
+"""
+This package shows how to use aspects to validate certain properties.
+
+
+
+"""
+
+cc_library(
+    name = "foo",
+)
+
+cc_test(
+    name = "test_with_size",
+    size = "enormous",
+    srcs = ["test_bar.cpp"],
+    deps = [
+        "foo",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_test(
+    name = "test_without_size",
+    srcs = ["test_bar.cpp"],
+    deps = [
+        "foo",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_test(
+    name = "test_without_dep",
+    srcs = ["test_bar.cpp"],
+    deps = [
+        "foo",
+        "@googletest//:gtest_main",
+    ],
+)
